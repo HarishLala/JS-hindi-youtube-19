@@ -28,3 +28,27 @@ console.log(myObj);
 const myFunction = function (){
     console.log("Hello Banglore ");
 }
+console.log(myFunction());
+
+//==========================================================
+//STACK Memory(Primitive)   Heap Memory(Non Primitive)
+
+// let myYoutubeName="harishkumarlala222@rediffmail.com";
+
+// let anotherId=myYoutubeName
+// anotherId="chaiaurcode"
+
+// console.log(myYoutubeName);//myYoutubeName
+// console.log(anotherId);//myYoutubeName
+
+
+let userOne={
+    email:"user@gmail.com",
+    upi:"user@ybl"
+}
+let userTwo= userOne
+userTwo.email="harish@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
