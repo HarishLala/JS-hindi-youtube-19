@@ -5,8 +5,10 @@ const repoCount=50
 
  
 const gameName =new String('harish')
-console.log(gameName[0]);
-console.log(gameName.__proto__);
-console.log(gameName.length);
-console.log(gameName.toUpperCase());
-console.log(gameName.charAt(2));
+// console.log(gameName[0]);
+// console.log(gameName.__proto__);
+// console.log(gameName.length);
+// console.log(gameName.toUpperCase());
+// console.log(gameName.charAt(2));
+
+console.log(gameName.indexOf(2));
