@@ -24,9 +24,9 @@ let myTimeStamp= Date.now();
 // console.log(Math.floor(Date.now()/1000));//1722256483
 
 let newDate =new Date()
-console.log(newDate);
-console.log(newDate.getMonth());
-console.log(newDate.getDay());
+// console.log(newDate);
+// console.log(newDate.getMonth());
+// console.log(newDate.getDay());
 //`${newDate.getDay()} and the time ${newDate.getTime()}`
 
 console.log(newDate.toLocaleString('default',{
