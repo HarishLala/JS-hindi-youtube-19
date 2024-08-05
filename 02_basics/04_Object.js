@@ -44,12 +44,49 @@ const users=[
 
 users[1].id
 users[1].email
-console.log(users);
+// console.log(users);
 
 
-console.log(tinderUser);
+// console.log(tinderUser);
 // console.log(Object.keys(tinderUser));//[ 'id', 'name', 'isLoggedIn' ]
 // console.log(Object.values(tinderUser));//[ '123abc', 'Harish', false ]
 // console.log(Object.entries(tinderUser));//[ [ 'id', '123abc' ], [ 'name', 'Harish' ], [ 'isLoggedIn', false ] ]
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
+
+const course={
+    courseName :"JavaScript In Hindi",
+    price:"999",
+    courseInstructor :"Harish"
+}
+// course.courseInstructor
+// console.log(course.courseInstructor);
+
+// const {courseInstructor}= course
+// console.log(courseInstructor);
+const {courseInstructor: instructor}= course
+console.log(instructor);
+
+// De-structure
+// const navbar =(props.company)=>{
+
+// }
+// navbar(comapany ="harish")
+// const navbar =({company})=>{
+
+// }
+// navbar(comapany ="harish")
+
+//API Application Programming Interface.
+// JSON
+// {
+        // "name":"Harish",
+        // "courseName":"Js In Hindi",
+        // "price":"free"
+
+// }
+// [
+//     {},
+//     {},
+//     {}
+// ]
