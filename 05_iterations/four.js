@@ -25,3 +25,6 @@ for (const key in programming) {
 //     console.log(map[key]);
     
 // }
+for (const element of object) {
+  
+}
