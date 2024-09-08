@@ -71,8 +71,6 @@ buttons.forEach(function (button) {
     // break;
   });
 });
-
-
 ```
 
 
@@ -85,7 +83,7 @@ const form = document.querySelector('form');
 form.addEventListener('submit', function (e) {
   const overweight = 24.9;
   const underWeight = 18.6;
-  const NormalRange = 18.6;
+
   e.preventDefault();
   const height = parseInt(document.querySelector('#height').value);
   const weight = parseInt(document.querySelector('#weight').value);
@@ -100,7 +98,7 @@ form.addEventListener('submit', function (e) {
       bmi = `${bmi} Overweight`;
     } else if (bmi < underWeight) {
       bmi = `${bmi} Underweight`;
-    } else if (bmi === 18.6 || bmi > 18.6 || bmi < 24.9 || bmi === 24.9) {
+    } else if (bmi > underWeight && bmi < overweight) {
       bmi = `${bmi} NormalRange`;
     }
     // if (bmi < 18.6 || bmi < 0) {
@@ -116,6 +114,5 @@ form.addEventListener('submit', function (e) {
   }
   // results.innerHTML = `${height}`;
 });
-
 
 ```
