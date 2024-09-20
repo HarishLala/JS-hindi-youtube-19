@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chaiaurcode</title>
+</head>
+<body>
+        <h1 id="title">Chai aur JavaScript</h1>
+        <!-- <input type="text" value=""/> -->
+        <!-- <div style="width: 20px; height: 20px;"></div> -->
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+</body>
+<script>
+    // setInterval(function(){
+    //     console.log("Harish",Date.now());
+    // },1000)
+
+    let intervalId;
+
+    const randomColor = () => {
+        let color = Math.floor(Math.random()*16777215).toString(16);
+        changeTextColor(color)
+        return;
+    }
+
+    const changeTextColor = (color) => {
+        let colorN = '#'+color
+        let text = document.getElementById('title')
+        // let inputElement = document.querySelector('input')
+        // let divElement = document.querySelector('div')
+        // divElement.style.backgroundColor = colorN
+        // document.body.style.backgroundColor = colorN
+
+        // inputElement.value = colorN
+        text.style.color= colorN
+    }
+
+    // const sayDate = function(str){
+    //     console.log(str,Date.now());
+    // }
+    
+   document.querySelector('#start').addEventListener('click',function () {
+    if(!intervalId){
+        intervalId =setInterval(randomColor, 1000 )
+    }
+   })
+
+   document.querySelector('#stop').addEventListener('click',function () {
+    clearInterval(intervalId);
+    intervalId = null;
+   })
+
+</script>
+</html> 
