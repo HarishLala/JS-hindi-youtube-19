@@ -223,3 +223,56 @@ function newGame() {
   });
 }
 ```
+##Projcet 5
+```JavaScript
+const insert = document.getElementById('insert');
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+  <div class='color'>
+  <table>
+  <tr>
+    <th>Key</th>
+    <th>KeyCode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'space' : e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>
+  
+  </div> `;
+});
+```
+##Projcet 6
+```JavaScript
+//Generate A Random Color
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+// consle.log(Math.floor(Math.random() * 16));
+// console.log(randomColor());
+let intervalId;
+const startChangeColor = function () {
+  if (!intervalId) {
+    intervalId = setInterval(changeBgColor, 1000);
+  }
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+const stopChangeColor = function () {
+  clearInterval(intervalId);
+  //FlashOut
+  intervalId = null;
+};
+document.querySelector('#start').addEventListener('click', startChangeColor);
+document.querySelector('#stop').addEventListener('click', stopChangeColor);
+
+```
