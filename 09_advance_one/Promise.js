@@ -73,6 +73,7 @@ const promiseFive = new Promise(function(resolve, reject){
     setTimeout(function(){
         let error = false
         if (!error) {
+            //We Pass object {} using this operator& Function
             resolve({username: "javascript", password: "123"})
         } else {
             reject('ERROR: JS went wrong')
