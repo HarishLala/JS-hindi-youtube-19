@@ -27,11 +27,16 @@ function User(username,loginCount,isLoggedIn) {
     this.username=username;
     this.loginCount=loginCount;
     this.isLoggedIn=isLoggedIn;
+    this.greeting = function () {
+        console.log(`Welcome ${this.usrname}`)
+    }
     //Implicity it working 
     return this
 }
 const userOne =new User('Sonali', 12, true)
 const userTwo =new  User('Harish', 11, false)
 //This one created overridethe method
-console.log(userOne);
-console.log(userTwo);
+// console.log(userOne);
+// console.log(userTwo);
+console.log(userOne.constructor); // refrence [Function: User]
+// console.log(userTwo);
